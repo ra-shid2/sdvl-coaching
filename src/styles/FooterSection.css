@@ -1,0 +1,41 @@
+/* Footer.css */
+.footer {
+    padding: 24px;
+    background-color: #333;
+    color: #fff;
+    text-align: center; /* Center align the content */
+  }
+  
+  .footer-title {
+    font-size: 3em;
+    font-weight: lighter;
+    text-align: left;
+  }
+  
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Evenly distribute columns */
+  }
+  
+  .footer-column {
+    flex-basis: 100%; /* One column on small screens */
+    margin-bottom: 24px;
+  }
+
+  .subtitle{
+    margin-bottom: 0px;
+  }
+  
+  .cta {
+    text-align: right;
+    margin: 24px;
+  }
+  
+  /* Media query for wide screens */
+  @media only screen and (min-width: 600px) {
+    .footer-column {
+      flex-basis: calc(33.33% - 20px); /* Three columns on wide screen with margin */
+    }
+  }
+  

@@ -26,22 +26,18 @@ const Work: React.FC<WorkProps> = ({ imageSrc, title }) => {
           marginBottom: '8px',
         }}
       />
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ display: 'flex', alignItems: 'start' }}>
         <KeyboardReturnIcon
           sx={{
             color: 'secondary.main',
             fontSize: 20,
-            marginRight: '8px',
+            marginRight: '12px',
             transform: 'scaleX(-1)', // Mirror the icon horizontally
           }}
         />
-        <Typography
-          variant="body1"
-          component="h2"
-          sx={{ wordWrap: 'break-word' }}
-        >
-          {title}
-        </Typography>
+        <Typography variant="body1" component="h2" sx={{ wordWrap: 'break-word', maxWidth: '150px' , textAlign: 'left'}}>
+        {title}
+      </Typography>
       </div>
     </div>
   );

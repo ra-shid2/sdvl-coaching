@@ -1,0 +1,30 @@
+.responsive-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    word-spacing: 4px;
+  }
+  
+  .responsive-button.hovered {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .responsive-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .responsive-button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+  

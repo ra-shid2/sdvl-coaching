@@ -1,0 +1,30 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 24px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure navbar appears above other content */
+  }
+  
+  .navbar-left {
+    flex-grow: 1; /* Logo will take all available space */
+  }
+  
+  .logo {
+    height: 30px; /* Adjust height as needed */
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

@@ -1,24 +1,30 @@
+/* Flex layout for hero section */
 .hero-section {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 85vh;
+
 }
 
+/* Title styling */
 .hero-title {
-  font-size: 2.8rem; /* Adjust font size according to your design */
-  margin-bottom: 0px; /* Adjust spacing between title and subtitle */
+  font-size: 2.8rem; /* Responsive font size based on viewport width */
+  margin-bottom: 0px;
   line-height: 3.6rem;
   font-weight: 600;
 }
 
+/* Subtitle styling */
 .hero-subtitle {
-  font-size: 1.6rem; /* Adjust font size according to your design */
+  font-size: 1.6rem; /* Responsive font size based on viewport width */
   font-weight: 400;
   margin-bottom: 24px;
 }
 
+/* Content container */
 .hero-content {
   flex: 1;
+  /* background-color: blueviolet; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,42 +32,92 @@
   padding: 32px;
 }
 
+
+/* Image container */
 .hero-image {
   flex: 1;
-
+  /* background-color: aquamarine; */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 32px;
+  padding:32px;
 }
 
+/* Image styling */
 .hero-image img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover; /* Ensure the image maintains its aspect ratio while fitting inside the container */
+
 }
+
+
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
+
+
   .hero-section {
-    flex-direction: column-reverse;
+    flex-direction: column;
+
   }
 
+  .centered{
+    text-align: center;
+  }
+
+  /* Adjust content and image layout for smaller screens */
   .hero-content,
   .hero-image {
     flex: 1;
+    max-width: 100%; 
+    max-height: 50%;
+  }
+
+  .hero-content{
+    padding: 32px 32px 64px 32px;
+  }
+
+  .hero-image{
+    padding: 32px 32px 0px 32px;
   }
 
   .hero-content {
-    order: 1;
+    order: 2;
   }
 
   .hero-image {
-    order: 2;
-   flex : 8;
+    order: 1;
+    flex: 1; /* Adjust image size to occupy more space on smaller screens */
+  }
+
+  /* Adjust image dimensions for smaller screens */
+  .hero-image img {
+    max-height: 100%; 
+  }
+
+  /* Reset font sizes for smaller screens if needed */
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet breakpoint */
+  .hero-title {
+    font-size: 2.0rem; /* Fixed font size for tablet */
+    line-height: 2.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1.4rem; /* Fixed font size for tablet */
   }
 
   .hero-image img {
-    max-height: 100%;
-    max-width: none; /* Remove max-width for smaller screens */
+    max-height: 80%; /* Fixed image size for tablet */
   }
 }
