@@ -1,19 +1,18 @@
 .background-container {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    padding: 20px;
-   
+    background-color: #333;
+    padding: 56px 40px;
   }
   
   .background-title {
     font-weight: lighter;
-    margin-bottom: 10px; /* Add margin to separate from content */
+    margin: 0;
+    padding: 0;
   }
   
   .background-items {
     display: grid;
-  
     grid-template-columns: 1fr;
     gap: 10px; /* Add gap between items */
     justify-items: end;

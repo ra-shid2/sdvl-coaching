@@ -5,7 +5,7 @@ import Experiences from '../components/ExperienceSection';
 import Footer from '../components/FooterSection';
 import WorkSection from '../components/WorkSection';
 import Navbar from '../components/Navbar';
-import { Box } from '@mui/material';
+// import { Box } from '@mui/material';
 import UserForm from '../components/UserForm';
 
 
@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
         imagePath="src/assets/hero.png"
         ctaText="SCHEDULE A MEETING"
       />
-            <Box height={80} />
+      {/* <Box height={80} /> */}
       <Experiences title="My Background" items={backgroundItems} />
 
       <HeroSection
@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
         imagePath="src/assets/hero.png"
         ctaText=""
       />
-      <Box height={56} />
+      {/* <Box height={56} /> */}
       <WorkSection />
 
       <HeroSection
@@ -48,10 +48,9 @@ const HomePage: React.FC = () => {
         imagePath="src/assets/hero.png"
         ctaText="work with me today"
       />
-      <Box height={32} />
-      <UserForm />
+      {/* <Box height={32} /> */}
       <WorkSection />
-
+      <UserForm />
       <Footer />
     </div>
   );
