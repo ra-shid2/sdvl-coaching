@@ -1,6 +1,8 @@
 // Footer.tsx
 import React from 'react';
 import '../styles/FooterSection.css'
+import { Button } from '@mui/material';
+import { handleScrollTo } from '../utils/scrollUtil';
 
 const Footer: React.FC = () => {
     return (
@@ -20,7 +22,11 @@ const Footer: React.FC = () => {
                     <p>+1234567890</p>
                 </div>
             </div>
-            <div className="cta">Schedule A Meeting</div>
+            <div className="cta">
+                <Button variant="text" size="medium" onClick={handleScrollTo}>
+                    Schedule A Meeting
+                </Button>
+            </div>
         </footer>
     );
 };

@@ -12,9 +12,6 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ title, subtitle, ctaText, imagePath }) => {
-  const handleClick = () => {
-    console.log('Button clicked');
-  };
   return (
     <div className="hero-section">
       {/* First column */}
@@ -23,7 +20,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, subtitle, ctaText, ima
         {subtitle && <h2 className="hero-subtitle">{subtitle}</h2>}
         {subtitle && (
           (ctaText && (
-            <ResponsiveButton onClick={handleClick} text={ctaText} />
+          
+              <ResponsiveButton text={ctaText} />
+         
+            
           )) || (
             <Divider style={{ height: '2px', width: '25%', backgroundColor: '#f5f5f5', borderRadius: '6px' }} />
           )

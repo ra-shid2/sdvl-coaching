@@ -82,7 +82,7 @@ const UserForm: React.FC = () => {
   };
 
   return (
-    <div className="user-form-container">
+    <div id="userForm" className="user-form-container">
       <h2>Connect With Me</h2>
       <form onSubmit={handleSubmit}>
         <div className="row">

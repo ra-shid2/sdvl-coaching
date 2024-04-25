@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import '../styles/ResponsiveButton.css'; // Import your CSS file for styling
+import { handleScrollTo } from '../utils/scrollUtil.ts';
 
 interface ButtonProps {
-  onClick: () => void;
   text: string;
 }
 
-const ResponsiveButton: React.FC<ButtonProps> = ({ onClick, text }) => {
+const ResponsiveButton: React.FC<ButtonProps> = ({ text }) => {
   const [hovered, setHovered] = useState(false);
+
+  const handleClick = () => {
+    handleScrollTo();
+  };
 
   return (
     <button
       className={`responsive-button ${hovered ? 'hovered' : ''}`}
-      onClick={onClick}
+      onClick={handleClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
